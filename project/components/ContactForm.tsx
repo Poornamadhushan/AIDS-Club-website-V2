@@ -51,7 +51,7 @@ export default function ContactForm() {
           <CheckCircle size={28} style={{ color: '#10b981' }} />
         </div>
         <h3 className="text-xl font-bold text-white">Message Sent!</h3>
-        <p className="text-sm" style={{ color: '#9CA3AF' }}>Thanks for reaching out. We'll get back to you shortly.</p>
+        <p className="text-sm" style={{ color: '#9CA3AF' }}>Thanks for reaching out. We&apos;ll get back to you shortly.</p>
         <style jsx>{`
           @keyframes fadeIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
         `}</style>

@@ -47,7 +47,7 @@ export default function EventsPage() {
           style={{ opacity: header.visible ? 1 : 0, transform: header.visible ? 'translateY(0)' : 'translateY(20px)' }}
         >
           <span className="text-xs font-semibold tracking-widest uppercase mb-3 block" style={{ color: '#2563EB' }}>
-            What's Happening
+            What&apos;s Happening
           </span>
           <h1 className="text-4xl sm:text-6xl font-bold text-white mb-4">
             Club <span className="text-gradient">Events</span>

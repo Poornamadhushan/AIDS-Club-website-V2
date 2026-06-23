@@ -106,7 +106,7 @@ export default function OverviewPage() {
           <div ref={vision.ref} className="text-center mb-10 transition-all duration-700"
             style={{ opacity: vision.visible ? 1 : 0, transform: vision.visible ? 'translateY(0)' : 'translateY(20px)' }}>
             <span className="text-xs font-semibold tracking-widest uppercase mb-3 block" style={{ color: '#2563EB' }}>Our Vision</span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white">Where We're Headed</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-white">Where We&apos;re Headed</h2>
           </div>
           <div className="relative p-8 rounded-2xl text-center transition-all duration-700 delay-100"
             style={{
@@ -121,7 +121,7 @@ export default function OverviewPage() {
               <Eye size={24} style={{ color: '#2563EB' }} />
             </div>
             <blockquote className="text-xl sm:text-2xl font-semibold text-white leading-relaxed">
-              "To become the <span className="text-gradient">leading student community</span> driving innovation in Artificial Intelligence and Data Science — producing graduates who shape the future of technology in Sri Lanka and beyond."
+              To become the <span className="text-gradient">leading student community</span> driving innovation in Artificial Intelligence and Data Science — producing graduates who shape the future of technology in Sri Lanka and beyond.
             </blockquote>
           </div>
         </div>

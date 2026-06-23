@@ -95,7 +95,7 @@ export default function ContactPage() {
             Contact <span className="text-gradient">DatAInspire</span>
           </h1>
           <p className="text-base sm:text-lg" style={{ color: '#9CA3AF' }}>
-            Have a question, want to join, or interested in collaboration? We'd love to hear from you.
+            Have a question, want to join, or interested in collaboration? We&apos;d love to hear from you.
           </p>
         </div>
       </section>

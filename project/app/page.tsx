@@ -52,7 +52,7 @@ export default function HomePage() {
                 About DatAInspire
               </span>
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6 leading-tight">
-                Shaping Sri Lanka's Next Generation of AI Leaders
+                Shaping Sri Lanka&apos;s Next Generation of AI Leaders
               </h2>
               <p className="text-base leading-relaxed mb-4" style={{ color: '#9CA3AF' }}>
                 DatAInspire is the premier AI & Data Science student club at General Sir John Kotelawala Defence University. We are a community of passionate learners, researchers, and innovators committed to advancing AI knowledge and practice.
@@ -107,7 +107,7 @@ export default function HomePage() {
           >
             <div>
               <span className="text-xs font-semibold tracking-widest uppercase mb-2 block" style={{ color: '#2563EB' }}>
-                What's Next
+                What&apos;s Next
               </span>
               <h2 className="text-3xl sm:text-4xl font-bold text-white">Upcoming Events</h2>
             </div>
