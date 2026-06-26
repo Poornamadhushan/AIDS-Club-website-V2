@@ -36,7 +36,7 @@ export default function EventsPage() {
   };
 
   return (
-    <main className="min-h-screen pt-24" style={{ background: '#030712' }}>
+    <main className="min-h-screen pt-24" style={{ background: 'var(--bg-primary)' }}>
       {/* Header */}
       <section className="relative py-16 overflow-hidden">
         <div className="absolute inset-0 grid-bg opacity-30" />
@@ -52,7 +52,7 @@ export default function EventsPage() {
           <h1 className="text-4xl sm:text-6xl font-bold text-white mb-4">
             Club <span className="text-gradient">Events</span>
           </h1>
-          <p className="text-base sm:text-lg" style={{ color: '#9CA3AF' }}>
+          <p className="text-base sm:text-lg" style={{ color: 'var(--text-muted)' }}>
             Workshops, hackathons, seminars, and industry sessions designed to elevate your AI journey.
           </p>
         </div>
@@ -71,14 +71,14 @@ export default function EventsPage() {
       <section className="pb-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex gap-2 mb-10 p-1 rounded-xl w-fit"
-            style={{ background: 'rgba(17,24,39,0.7)', border: '1px solid rgba(255,255,255,0.07)' }}>
+            style={{ background: 'var(--surface-glass-strong)', border: '1px solid var(--border-color)' }}>
             {(['upcoming', 'past'] as const).map(t => (
               <button
                 key={t}
                 onClick={() => switchTab(t)}
                 className="relative px-6 py-2.5 rounded-lg text-sm font-semibold capitalize transition-all duration-200"
                 style={{
-                  color: tab === t ? '#F9FAFB' : '#9CA3AF',
+                  color: tab === t ? 'var(--text-primary)' : 'var(--text-muted)',
                   background: tab === t ? 'linear-gradient(135deg, rgba(37,99,235,0.3), rgba(6,182,212,0.2))' : 'transparent',
                   border: tab === t ? '1px solid rgba(37,99,235,0.3)' : '1px solid transparent',
                 }}
@@ -87,8 +87,8 @@ export default function EventsPage() {
                 <span
                   className="ml-2 px-1.5 py-0.5 rounded-full text-xs"
                   style={{
-                    background: tab === t ? 'rgba(37,99,235,0.3)' : 'rgba(255,255,255,0.06)',
-                    color: tab === t ? '#93C5FD' : '#6B7280',
+                    background: tab === t ? 'rgba(37,99,235,0.3)' : 'var(--control-bg)',
+                    color: tab === t ? '#93C5FD' : 'var(--text-subtle)',
                   }}
                 >
                   {t === 'upcoming' ? upcoming.length : past.length}
@@ -109,7 +109,7 @@ export default function EventsPage() {
       </section>
 
       {/* Gallery */}
-      <section className="py-16" style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+      <section className="py-16" style={{ borderTop: '1px solid var(--border-color)' }}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div
             ref={gallery.ref}

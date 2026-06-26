@@ -36,7 +36,7 @@ export default function CountdownTimer({ targetDate, eventTitle }: CountdownTime
   return (
     <div className="rounded-2xl p-8 text-center"
       style={{
-        background: 'rgba(17,24,39,0.7)',
+        background: 'var(--surface-glass-strong)',
         border: '1px solid rgba(37,99,235,0.2)',
         boxShadow: '0 0 40px rgba(37,99,235,0.1)',
       }}
@@ -58,11 +58,11 @@ export default function CountdownTimer({ targetDate, eventTitle }: CountdownTime
                   fontFamily: 'JetBrains Mono, monospace',
                 }}
               >
-                <span className="text-2xl sm:text-3xl font-bold" style={{ color: '#F9FAFB' }}>
+                <span className="text-2xl sm:text-3xl font-bold" style={{ color: 'var(--text-primary)' }}>
                   {String(value).padStart(2, '0')}
                 </span>
               </div>
-              <span className="text-xs" style={{ color: '#6B7280' }}>{label}</span>
+              <span className="text-xs" style={{ color: 'var(--text-subtle)' }}>{label}</span>
             </div>
             {i < 3 && (
               <span className="text-2xl font-bold mb-5" style={{ color: '#2563EB' }}>:</span>

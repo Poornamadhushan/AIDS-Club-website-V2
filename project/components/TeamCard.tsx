@@ -32,8 +32,8 @@ export default function TeamCard({ member, index = 0 }: { member: TeamMember; in
       ref={ref}
       className="group relative rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1"
       style={{
-        background: 'rgba(17,24,39,0.7)',
-        border: '1px solid rgba(255,255,255,0.07)',
+        background: 'var(--surface-glass-strong)',
+        border: '1px solid var(--border-color)',
         opacity: visible ? 1 : 0,
         transform: visible ? 'translateY(0)' : 'translateY(30px)',
         transition: `opacity 0.5s ease ${(index % 4) * 0.08}s, transform 0.5s ease ${(index % 4) * 0.08}s`,
@@ -57,7 +57,7 @@ export default function TeamCard({ member, index = 0 }: { member: TeamMember; in
 
         {/* Name & Position */}
         <div>
-          <h3 className="font-bold text-sm" style={{ color: '#F9FAFB' }}>{member.name}</h3>
+          <h3 className="font-bold text-sm" style={{ color: 'var(--text-primary)' }}>{member.name}</h3>
           <span className="text-xs px-2 py-0.5 rounded-full mt-1 inline-block"
             style={{ background: 'rgba(37,99,235,0.15)', color: '#60A5FA', border: '1px solid rgba(37,99,235,0.2)' }}>
             {member.position}
@@ -65,7 +65,7 @@ export default function TeamCard({ member, index = 0 }: { member: TeamMember; in
         </div>
 
         {/* Bio */}
-        <p className="text-xs leading-relaxed line-clamp-3" style={{ color: '#9CA3AF' }}>{member.bio}</p>
+        <p className="text-xs leading-relaxed line-clamp-3" style={{ color: 'var(--text-muted)' }}>{member.bio}</p>
 
         {/* Interests */}
         <div className="flex flex-wrap justify-center gap-1.5">
@@ -73,7 +73,7 @@ export default function TeamCard({ member, index = 0 }: { member: TeamMember; in
             <span
               key={interest}
               className="flex items-center gap-1 px-2 py-0.5 rounded-md text-xs"
-              style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', color: '#D1D5DB' }}
+              style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid var(--border-color)', color: 'var(--text-muted)' }}
             >
               {interestIcons[interest] || <Brain size={11} />}
               {interest}
@@ -82,12 +82,12 @@ export default function TeamCard({ member, index = 0 }: { member: TeamMember; in
         </div>
 
         {/* Social links */}
-        <div className="flex items-center gap-3 w-full justify-center pt-3" style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+        <div className="flex items-center gap-3 w-full justify-center pt-3" style={{ borderTop: '1px solid var(--border-color)' }}>
           <a
             href={member.github} target="_blank" rel="noopener noreferrer"
             aria-label={`${member.name} GitHub`}
             className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs transition-all duration-200 hover:scale-105"
-            style={{ background: 'rgba(255,255,255,0.05)', color: '#9CA3AF', border: '1px solid rgba(255,255,255,0.08)' }}
+            style={{ background: 'var(--surface-soft)', color: 'var(--text-muted)', border: '1px solid var(--border-color)' }}
           >
             <Github size={12} /><span>GitHub</span>
           </a>

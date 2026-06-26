@@ -33,8 +33,8 @@ export default function EventCard({ event, index = 0 }: { event: (typeof events)
       ref={ref}
       className="group relative overflow-hidden rounded-2xl flex flex-col transition-all duration-300 hover:-translate-y-1"
       style={{
-        background: 'rgba(17,24,39,0.7)',
-        border: '1px solid rgba(255,255,255,0.07)',
+        background: 'var(--surface-glass-strong)',
+        border: '1px solid var(--border-color)',
         opacity: visible ? 1 : 0,
         transform: visible ? 'translateY(0)' : 'translateY(30px)',
         transition: `opacity 0.5s ease ${index * 0.1}s, transform 0.5s ease ${index * 0.1}s`,
@@ -47,7 +47,7 @@ export default function EventCard({ event, index = 0 }: { event: (typeof events)
           alt={event.title}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
-        <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, transparent 40%, rgba(17,24,39,0.95) 100%)' }} />
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, transparent 40%, var(--image-scrim) 100%)' }} />
         <span
           className="absolute top-3 left-3 px-2.5 py-1 rounded-md text-xs font-semibold text-white"
           style={{ background: `${color}cc`, backdropFilter: 'blur(8px)' }}
@@ -59,7 +59,7 @@ export default function EventCard({ event, index = 0 }: { event: (typeof events)
           style={{
             background: event.status === 'upcoming' ? 'rgba(16,185,129,0.2)' : 'rgba(107,114,128,0.3)',
             border: event.status === 'upcoming' ? '1px solid rgba(16,185,129,0.4)' : '1px solid rgba(107,114,128,0.4)',
-            color: event.status === 'upcoming' ? '#34d399' : '#9CA3AF',
+            color: event.status === 'upcoming' ? '#34d399' : 'var(--text-muted)',
             backdropFilter: 'blur(8px)',
           }}
         >
@@ -69,17 +69,17 @@ export default function EventCard({ event, index = 0 }: { event: (typeof events)
 
       {/* Content */}
       <div className="flex flex-col gap-3 p-5 flex-1">
-        <h3 className="font-bold text-base leading-snug" style={{ color: '#F9FAFB' }}>{event.title}</h3>
-        <p className="text-sm leading-relaxed line-clamp-2" style={{ color: '#9CA3AF' }}>{event.description}</p>
+        <h3 className="font-bold text-base leading-snug" style={{ color: 'var(--text-primary)' }}>{event.title}</h3>
+        <p className="text-sm leading-relaxed line-clamp-2" style={{ color: 'var(--text-muted)' }}>{event.description}</p>
 
-        <div className="flex flex-col gap-2 mt-auto pt-3" style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}>
-          <div className="flex items-center gap-2 text-xs" style={{ color: '#6B7280' }}>
+        <div className="flex flex-col gap-2 mt-auto pt-3" style={{ borderTop: '1px solid var(--border-color)' }}>
+          <div className="flex items-center gap-2 text-xs" style={{ color: 'var(--text-subtle)' }}>
             <Calendar size={12} /><span>{formattedDate}</span>
           </div>
-          <div className="flex items-center gap-2 text-xs" style={{ color: '#6B7280' }}>
+          <div className="flex items-center gap-2 text-xs" style={{ color: 'var(--text-subtle)' }}>
             <Clock size={12} /><span>{event.time}</span>
           </div>
-          <div className="flex items-center gap-2 text-xs" style={{ color: '#6B7280' }}>
+          <div className="flex items-center gap-2 text-xs" style={{ color: 'var(--text-subtle)' }}>
             <MapPin size={12} /><span className="line-clamp-1">{event.venue}</span>
           </div>
         </div>

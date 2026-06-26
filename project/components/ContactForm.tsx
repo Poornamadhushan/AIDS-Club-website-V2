@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import type { CSSProperties } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
@@ -15,16 +16,16 @@ const schema = z.object({
 
 type FormData = z.infer<typeof schema>;
 
-const inputStyle: React.CSSProperties = {
-  background: 'rgba(17,24,39,0.7)',
-  border: '1px solid rgba(255,255,255,0.08)',
-  color: '#F9FAFB',
+const inputStyle: CSSProperties = {
+  background: 'var(--surface-glass-strong)',
+  border: '1px solid var(--border-color)',
+  color: 'var(--text-primary)',
 };
 
-const errorStyle: React.CSSProperties = {
-  background: 'rgba(17,24,39,0.7)',
+const errorStyle: CSSProperties = {
+  background: 'var(--surface-glass-strong)',
   border: '1px solid rgba(239,68,68,0.5)',
-  color: '#F9FAFB',
+  color: 'var(--text-primary)',
 };
 
 export default function ContactForm() {
@@ -51,7 +52,7 @@ export default function ContactForm() {
           <CheckCircle size={28} style={{ color: '#10b981' }} />
         </div>
         <h3 className="text-xl font-bold text-white">Message Sent!</h3>
-        <p className="text-sm" style={{ color: '#9CA3AF' }}>Thanks for reaching out. We&apos;ll get back to you shortly.</p>
+        <p className="text-sm" style={{ color: 'var(--text-muted)' }}>Thanks for reaching out. We&apos;ll get back to you shortly.</p>
         <style jsx>{`
           @keyframes fadeIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
         `}</style>
@@ -66,7 +67,7 @@ export default function ContactForm() {
     <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-5" noValidate>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div className="flex flex-col gap-1.5">
-          <label className="text-xs font-medium" style={{ color: '#9CA3AF' }}>Full Name *</label>
+          <label className="text-xs font-medium" style={{ color: 'var(--text-muted)' }}>Full Name *</label>
           <input
             {...register('name')}
             placeholder="Cadet John Doe"
@@ -82,7 +83,7 @@ export default function ContactForm() {
           )}
         </div>
         <div className="flex flex-col gap-1.5">
-          <label className="text-xs font-medium" style={{ color: '#9CA3AF' }}>Email Address *</label>
+          <label className="text-xs font-medium" style={{ color: 'var(--text-muted)' }}>Email Address *</label>
           <input
             {...register('email')}
             type="email"
@@ -101,7 +102,7 @@ export default function ContactForm() {
       </div>
 
       <div className="flex flex-col gap-1.5">
-        <label className="text-xs font-medium" style={{ color: '#9CA3AF' }}>Subject *</label>
+        <label className="text-xs font-medium" style={{ color: 'var(--text-muted)' }}>Subject *</label>
         <input
           {...register('subject')}
           placeholder="Membership Inquiry"
@@ -118,7 +119,7 @@ export default function ContactForm() {
       </div>
 
       <div className="flex flex-col gap-1.5">
-        <label className="text-xs font-medium" style={{ color: '#9CA3AF' }}>Message *</label>
+        <label className="text-xs font-medium" style={{ color: 'var(--text-muted)' }}>Message *</label>
         <textarea
           {...register('message')}
           rows={5}

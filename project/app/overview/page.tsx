@@ -43,7 +43,7 @@ export default function OverviewPage() {
   const valuesSection = useVisible();
 
   return (
-    <main className="min-h-screen pt-24" style={{ background: '#030712' }}>
+    <main className="min-h-screen pt-24" style={{ background: 'var(--bg-primary)' }}>
       {/* Hero */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 grid-bg opacity-30" />
@@ -54,7 +54,7 @@ export default function OverviewPage() {
           <h1 className="text-4xl sm:text-6xl font-bold text-white mb-6">
             About <span className="text-gradient">DatAInspire</span>
           </h1>
-          <p className="text-base sm:text-lg leading-relaxed" style={{ color: '#9CA3AF' }}>
+          <p className="text-base sm:text-lg leading-relaxed" style={{ color: 'var(--text-muted)' }}>
             DatAInspire is the official AI & Data Science Club at General Sir John Kotelawala Defence University. Founded by passionate students and faculty, we are a community committed to exploring, learning, and innovating in the fields of artificial intelligence, machine learning, and data science.
           </p>
         </div>
@@ -67,13 +67,13 @@ export default function OverviewPage() {
             <div className="transition-all duration-700"
               style={{ opacity: story.visible ? 1 : 0, transform: story.visible ? 'translateX(0)' : 'translateX(-30px)' }}>
               <h2 className="text-3xl font-bold text-white mb-5">Our Story</h2>
-              <p className="text-base leading-relaxed mb-4" style={{ color: '#9CA3AF' }}>
+              <p className="text-base leading-relaxed mb-4" style={{ color: 'var(--text-muted)' }}>
                 Established within the Faculty of Technology at KDU, DatAInspire bridges the gap between academic knowledge and real-world application. We operate at the intersection of cutting-edge research and practical skill development.
               </p>
-              <p className="text-base leading-relaxed mb-4" style={{ color: '#9CA3AF' }}>
+              <p className="text-base leading-relaxed mb-4" style={{ color: 'var(--text-muted)' }}>
                 Our members are cadets, officer cadets, and civilian students who share a deep interest in how AI and data science are reshaping the world — from defence intelligence to healthcare, finance, and beyond.
               </p>
-              <p className="text-base leading-relaxed" style={{ color: '#9CA3AF' }}>
+              <p className="text-base leading-relaxed" style={{ color: 'var(--text-muted)' }}>
                 Through events, workshops, and collaborative projects, we create a platform for students to grow into confident, capable technologists ready for the challenges of the 21st century.
               </p>
             </div>
@@ -88,10 +88,10 @@ export default function OverviewPage() {
                 <div
                   key={item.label}
                   className="flex flex-col gap-2 p-6 rounded-2xl text-center transition-all hover:scale-[1.03] cursor-default"
-                  style={{ background: 'rgba(17,24,39,0.7)', border: '1px solid rgba(255,255,255,0.07)' }}
+                  style={{ background: 'var(--surface-glass-strong)', border: '1px solid var(--border-color)' }}
                 >
                   <span className="text-2xl font-bold" style={{ color: item.color }}>{item.value}</span>
-                  <span className="text-xs" style={{ color: '#9CA3AF' }}>{item.label}</span>
+                  <span className="text-xs" style={{ color: 'var(--text-muted)' }}>{item.label}</span>
                 </div>
               ))}
             </div>
@@ -110,7 +110,7 @@ export default function OverviewPage() {
           </div>
           <div className="relative p-8 rounded-2xl text-center transition-all duration-700 delay-100"
             style={{
-              background: 'rgba(17,24,39,0.7)',
+              background: 'var(--surface-glass-strong)',
               border: '1px solid rgba(37,99,235,0.2)',
               boxShadow: '0 0 60px rgba(37,99,235,0.08)',
               opacity: vision.visible ? 1 : 0,
@@ -141,8 +141,8 @@ export default function OverviewPage() {
                 key={i}
                 className="flex items-center gap-4 p-5 rounded-2xl transition-all duration-300 hover:translate-x-1"
                 style={{
-                  background: 'rgba(17,24,39,0.6)',
-                  border: '1px solid rgba(255,255,255,0.07)',
+                  background: 'var(--surface-glass)',
+                  border: '1px solid var(--border-color)',
                   opacity: missionSection.visible ? 1 : 0,
                   transform: missionSection.visible ? 'translateX(0)' : 'translateX(-20px)',
                   transition: `opacity 0.5s ease ${i * 0.1}s, transform 0.5s ease ${i * 0.1}s`,
@@ -152,7 +152,7 @@ export default function OverviewPage() {
                   style={{ background: 'rgba(37,99,235,0.15)', border: '1px solid rgba(37,99,235,0.25)' }}>
                   <m.icon size={18} style={{ color: '#2563EB' }} />
                 </div>
-                <p className="text-sm leading-relaxed" style={{ color: '#D1D5DB' }}>{m.text}</p>
+                <p className="text-sm leading-relaxed" style={{ color: 'var(--text-muted)' }}>{m.text}</p>
                 <div className="ml-auto flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center"
                   style={{ background: 'rgba(37,99,235,0.2)' }}>
                   <div className="w-1.5 h-1.5 rounded-full bg-blue-400" />
@@ -177,8 +177,8 @@ export default function OverviewPage() {
                 key={v.title}
                 className="p-6 rounded-2xl flex flex-col gap-4 transition-all duration-300 hover:-translate-y-1"
                 style={{
-                  background: 'rgba(17,24,39,0.7)',
-                  border: '1px solid rgba(255,255,255,0.07)',
+                  background: 'var(--surface-glass-strong)',
+                  border: '1px solid var(--border-color)',
                   opacity: valuesSection.visible ? 1 : 0,
                   transform: valuesSection.visible ? 'translateY(0)' : 'translateY(25px)',
                   transition: `opacity 0.5s ease ${i * 0.08}s, transform 0.5s ease ${i * 0.08}s`,
@@ -190,7 +190,7 @@ export default function OverviewPage() {
                 </div>
                 <div>
                   <h3 className="font-bold text-base text-white mb-2">{v.title}</h3>
-                  <p className="text-sm leading-relaxed" style={{ color: '#9CA3AF' }}>{v.desc}</p>
+                  <p className="text-sm leading-relaxed" style={{ color: 'var(--text-muted)' }}>{v.desc}</p>
                 </div>
                 <div className="h-0.5 w-12 rounded-full mt-auto" style={{ background: `${v.color}60` }} />
               </div>

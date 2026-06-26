@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 import Image from 'next/image';
+import ThemeToggle from '@/components/ThemeToggle';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -38,10 +39,10 @@ export default function Navbar() {
       <header
         className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
         style={{
-          background: scrolled ? 'rgba(3,7,18,0.85)' : 'transparent',
+          background: scrolled ? 'var(--nav-bg)' : 'transparent',
           backdropFilter: scrolled ? 'blur(20px)' : 'none',
           WebkitBackdropFilter: scrolled ? 'blur(20px)' : 'none',
-          borderBottom: scrolled ? '1px solid rgba(255,255,255,0.06)' : 'none',
+          borderBottom: scrolled ? '1px solid var(--border-color)' : 'none',
           transform: mounted ? 'translateY(0)' : 'translateY(-80px)',
           opacity: mounted ? 1 : 0,
           transition: 'transform 0.5s ease, opacity 0.5s ease, background 0.3s, border 0.3s',
@@ -54,8 +55,8 @@ export default function Navbar() {
               <Image src="/assets/AIclub3d.png" alt="DatAInspire" fill className="object-contain" />
             </div>
             <div className="flex flex-col leading-none">
-              <span className="font-bold text-base text-white tracking-tight">DatAInspire</span>
-              <span className="text-[9px] tracking-widest uppercase" style={{ color: '#6B7280' }}>KDU</span>
+              <span className="font-bold text-base tracking-tight" style={{ color: 'var(--text-primary)' }}>DatAInspire</span>
+              <span className="text-[9px] tracking-widest uppercase" style={{ color: 'var(--text-subtle)' }}>KDU</span>
             </div>
           </Link>
 
@@ -69,15 +70,15 @@ export default function Navbar() {
                   href={link.href}
                   className="relative px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200"
                   style={{
-                    color: isActive ? '#F9FAFB' : '#9CA3AF',
+                    color: isActive ? 'var(--text-primary)' : 'var(--text-muted)',
                     background: isActive ? 'rgba(37,99,235,0.15)' : 'transparent',
                     border: isActive ? '1px solid rgba(37,99,235,0.25)' : '1px solid transparent',
                   }}
                   onMouseEnter={e => {
-                    if (!isActive) (e.currentTarget as HTMLElement).style.color = '#F9FAFB';
+                    if (!isActive) (e.currentTarget as HTMLElement).style.color = 'var(--text-primary)';
                   }}
                   onMouseLeave={e => {
-                    if (!isActive) (e.currentTarget as HTMLElement).style.color = '#9CA3AF';
+                    if (!isActive) (e.currentTarget as HTMLElement).style.color = 'var(--text-muted)';
                   }}
                 >
                   {link.label}
@@ -88,6 +89,7 @@ export default function Navbar() {
 
           {/* CTA */}
           <div className="hidden md:flex items-center gap-3">
+            <ThemeToggle />
             <Link
               href="/contact"
               className="px-4 py-2 text-sm font-semibold rounded-lg text-white transition-all duration-200 hover:opacity-90 hover:scale-105"
@@ -104,11 +106,11 @@ export default function Navbar() {
           {/* Mobile toggle */}
           <button
             className="md:hidden w-9 h-9 flex items-center justify-center rounded-lg"
-            style={{ background: 'rgba(255,255,255,0.06)' }}
+            style={{ background: 'var(--control-bg)', color: 'var(--text-primary)' }}
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
           >
-            {mobileOpen ? <X size={18} color="#F9FAFB" /> : <Menu size={18} color="#F9FAFB" />}
+            {mobileOpen ? <X size={18} color="currentColor" /> : <Menu size={18} color="currentColor" />}
           </button>
         </nav>
       </header>
@@ -126,8 +128,8 @@ export default function Navbar() {
       <div
         className="fixed top-0 right-0 bottom-0 z-50 w-72 flex flex-col p-6"
         style={{
-          background: '#0f172a',
-          borderLeft: '1px solid rgba(255,255,255,0.08)',
+          background: 'var(--bg-surface)',
+          borderLeft: '1px solid var(--border-color)',
           transform: mobileOpen ? 'translateX(0)' : 'translateX(100%)',
           transition: 'transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
         }}
@@ -137,14 +139,14 @@ export default function Navbar() {
             <div className="relative w-8 h-8">
               <Image src="/assets/AIclub3d.png" alt="DatAInspire" fill className="object-contain" />
             </div>
-            <span className="font-bold text-white">DatAInspire</span>
+            <span className="font-bold" style={{ color: 'var(--text-primary)' }}>DatAInspire</span>
           </div>
           <button
             onClick={() => setMobileOpen(false)}
             className="w-8 h-8 flex items-center justify-center rounded-lg"
-            style={{ background: 'rgba(255,255,255,0.06)' }}
+            style={{ background: 'var(--control-bg)', color: 'var(--text-muted)' }}
           >
-            <X size={16} color="#9CA3AF" />
+            <X size={16} />
           </button>
         </div>
 
@@ -157,7 +159,7 @@ export default function Navbar() {
                 href={link.href}
                 className="flex items-center px-4 py-3 rounded-xl text-sm font-medium transition-colors"
                 style={{
-                  color: isActive ? '#F9FAFB' : '#9CA3AF',
+                  color: isActive ? 'var(--text-primary)' : 'var(--text-muted)',
                   background: isActive ? 'rgba(37,99,235,0.15)' : 'transparent',
                   border: isActive ? '1px solid rgba(37,99,235,0.2)' : '1px solid transparent',
                 }}
@@ -167,6 +169,10 @@ export default function Navbar() {
             );
           })}
         </nav>
+
+        <div className="md:hidden mb-4">
+          <ThemeToggle />
+        </div>
 
         <Link
           href="/contact"

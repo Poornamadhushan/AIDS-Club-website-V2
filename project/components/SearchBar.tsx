@@ -1,6 +1,5 @@
 'use client';
 
-import { useState } from 'react';
 import { Search } from 'lucide-react';
 
 interface SearchBarProps {
@@ -12,7 +11,7 @@ interface SearchBarProps {
 export default function SearchBar({ value, onChange, placeholder = 'Search...' }: SearchBarProps) {
   return (
     <div className="relative">
-      <Search size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2" style={{ color: '#6B7280' }} />
+      <Search size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2" style={{ color: 'var(--text-subtle)' }} />
       <input
         type="text"
         value={value}
@@ -20,12 +19,12 @@ export default function SearchBar({ value, onChange, placeholder = 'Search...' }
         placeholder={placeholder}
         className="w-full pl-10 pr-4 py-2.5 rounded-xl text-sm outline-none transition-all duration-200"
         style={{
-          background: 'rgba(17,24,39,0.7)',
-          border: '1px solid rgba(255,255,255,0.08)',
-          color: '#F9FAFB',
+          background: 'var(--surface-glass-strong)',
+          border: '1px solid var(--border-color)',
+          color: 'var(--text-primary)',
         }}
         onFocus={e => { e.currentTarget.style.borderColor = 'rgba(37,99,235,0.5)'; }}
-        onBlur={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)'; }}
+        onBlur={e => { e.currentTarget.style.borderColor = 'var(--border-color)'; }}
       />
     </div>
   );

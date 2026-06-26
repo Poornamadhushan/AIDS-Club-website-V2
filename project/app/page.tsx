@@ -35,7 +35,7 @@ export default function HomePage() {
   const cta = useVisible();
 
   return (
-    <main className="min-h-screen" style={{ background: '#030712' }}>
+    <main className="min-h-screen" style={{ background: 'var(--bg-primary)' }}>
       <HeroSection />
 
       {/* About Preview */}
@@ -54,10 +54,10 @@ export default function HomePage() {
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6 leading-tight">
                 Shaping Sri Lanka&apos;s Next Generation of AI Leaders
               </h2>
-              <p className="text-base leading-relaxed mb-4" style={{ color: '#9CA3AF' }}>
+              <p className="text-base leading-relaxed mb-4" style={{ color: 'var(--text-muted)' }}>
                 DatAInspire is the premier AI & Data Science student club at General Sir John Kotelawala Defence University. We are a community of passionate learners, researchers, and innovators committed to advancing AI knowledge and practice.
               </p>
-              <p className="text-base leading-relaxed mb-8" style={{ color: '#9CA3AF' }}>
+              <p className="text-base leading-relaxed mb-8" style={{ color: 'var(--text-muted)' }}>
                 From hands-on workshops to industry collaborations and inter-university hackathons, we create opportunities for students to grow beyond the classroom and build the skills of tomorrow.
               </p>
               <Link
@@ -77,7 +77,7 @@ export default function HomePage() {
                 <div
                   key={h.title}
                   className="flex items-start gap-4 p-5 rounded-2xl transition-all duration-200 hover:translate-x-1"
-                  style={{ background: 'rgba(17,24,39,0.6)', border: '1px solid rgba(255,255,255,0.07)' }}
+                  style={{ background: 'var(--surface-glass)', border: '1px solid var(--border-color)' }}
                 >
                   <div className="flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center"
                     style={{ background: `${h.color}18`, border: `1px solid ${h.color}30` }}>
@@ -85,7 +85,7 @@ export default function HomePage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-sm mb-1 text-white">{h.title}</h3>
-                    <p className="text-xs leading-relaxed" style={{ color: '#9CA3AF' }}>{h.description}</p>
+                    <p className="text-xs leading-relaxed" style={{ color: 'var(--text-muted)' }}>{h.description}</p>
                   </div>
                 </div>
               ))}
@@ -149,7 +149,7 @@ export default function HomePage() {
             <h2 className="text-3xl sm:text-5xl font-bold text-white mb-6">
               Be Part of the <span className="text-gradient">AI Revolution</span>
             </h2>
-            <p className="text-base sm:text-lg mb-10" style={{ color: '#9CA3AF' }}>
+            <p className="text-base sm:text-lg mb-10" style={{ color: 'var(--text-muted)' }}>
               Join a community of forward-thinking students pushing the boundaries of artificial intelligence and data science at KDU.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -163,7 +163,7 @@ export default function HomePage() {
               <Link
                 href="/contact"
                 className="px-8 py-4 rounded-xl text-sm font-semibold transition-all hover:scale-105"
-                style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', color: '#D1D5DB' }}
+                style={{ background: 'var(--surface-soft)', border: '1px solid var(--border-color)', color: 'var(--text-muted)' }}
               >
                 Contact Us
               </Link>

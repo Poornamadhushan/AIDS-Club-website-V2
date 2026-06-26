@@ -42,7 +42,7 @@ export default function Preloader() {
     <div
       className="fixed inset-0 z-[9999] flex flex-col items-center justify-center overflow-hidden"
       style={{
-        background: '#030712',
+        background: 'var(--bg-primary)',
         opacity: fading ? 0 : 1,
         transition: 'opacity 0.6s ease-in-out',
         pointerEvents: fading ? 'none' : 'all',
@@ -77,22 +77,22 @@ export default function Preloader() {
             />
           </div>
           <div className="text-center">
-            <h1 className="text-2xl font-bold tracking-tight" style={{ color: '#F9FAFB' }}>DatAInspire</h1>
-            <p className="text-xs tracking-[0.25em] uppercase mt-0.5" style={{ color: '#6B7280' }}>
+            <h1 className="text-2xl font-bold tracking-tight" style={{ color: 'var(--text-primary)' }}>DatAInspire</h1>
+            <p className="text-xs tracking-[0.25em] uppercase mt-0.5" style={{ color: 'var(--text-subtle)' }}>
               KDU · AI & Data Science Club
             </p>
           </div>
         </div>
 
         {/* Scanning bar */}
-        <div className="w-48 h-px relative overflow-hidden" style={{ background: 'rgba(255,255,255,0.06)' }}>
+        <div className="w-48 h-px relative overflow-hidden" style={{ background: 'var(--control-bg)' }}>
           <div className="absolute top-0 left-0 h-full scan-bar"
             style={{ background: 'linear-gradient(90deg, transparent, #2563EB, #06B6D4, transparent)', width: '40%' }} />
         </div>
 
         {/* Progress */}
         <div className="flex flex-col items-center gap-4">
-          <div className="w-64 h-1 rounded-full overflow-hidden" style={{ background: 'rgba(255,255,255,0.06)' }}>
+          <div className="w-64 h-1 rounded-full overflow-hidden" style={{ background: 'var(--control-bg)' }}>
             <div
               className="h-full rounded-full"
               style={{
@@ -105,7 +105,7 @@ export default function Preloader() {
           </div>
           <div className="flex items-center gap-3">
             <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
-            <span className="font-mono text-xs" style={{ color: '#9CA3AF' }}>{statusText}</span>
+            <span className="font-mono text-xs" style={{ color: 'var(--text-muted)' }}>{statusText}</span>
             <span className="font-mono text-xs font-semibold" style={{ color: '#06B6D4' }}>{progress}%</span>
             <div className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
           </div>

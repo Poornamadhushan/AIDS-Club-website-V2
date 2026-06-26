@@ -22,8 +22,8 @@ export default function Footer() {
     <footer
       className="relative mt-auto"
       style={{
-        background: '#070d1a',
-        borderTop: '1px solid rgba(255,255,255,0.06)',
+        background: 'var(--bg-surface)',
+        borderTop: '1px solid var(--border-color)',
       }}
     >
       {/* Top gradient line */}
@@ -36,7 +36,7 @@ export default function Footer() {
           <div className="flex flex-col items-start gap-4">
             <div
               className="p-3 rounded-2xl"
-              style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.07)' }}
+              style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid var(--border-color)' }}
             >
               <div className="relative w-28 h-24">
                 <Image
@@ -47,7 +47,7 @@ export default function Footer() {
                 />
               </div>
             </div>
-            <p className="text-xs leading-relaxed" style={{ color: '#6B7280' }}>
+            <p className="text-xs leading-relaxed" style={{ color: 'var(--text-subtle)' }}>
               General Sir John Kotelawala<br />Defence University
             </p>
           </div>
@@ -60,16 +60,16 @@ export default function Footer() {
               </div>
               <div>
                 <div className="font-bold text-lg text-white">DatAInspire</div>
-                <div className="text-[9px] tracking-widest uppercase" style={{ color: '#6B7280' }}>AI & Data Science Club</div>
+                <div className="text-[9px] tracking-widest uppercase" style={{ color: 'var(--text-subtle)' }}>AI & Data Science Club</div>
               </div>
             </Link>
-            <p className="text-sm leading-relaxed" style={{ color: '#6B7280' }}>
+            <p className="text-sm leading-relaxed" style={{ color: 'var(--text-subtle)' }}>
               Empowering the next generation of AI innovators at KDU.
             </p>
             <a
               href="mailto:datainspire@kdu.ac.lk"
               className="flex items-center gap-2 text-sm transition-colors hover:text-white"
-              style={{ color: '#9CA3AF' }}
+              style={{ color: 'var(--text-muted)' }}
             >
               <Mail size={14} />
               datainspire@kdu.ac.lk
@@ -85,7 +85,7 @@ export default function Footer() {
                   <Link
                     href={link.href}
                     className="text-sm transition-colors hover:text-white"
-                    style={{ color: '#6B7280' }}
+                    style={{ color: 'var(--text-subtle)' }}
                   >
                     {link.label}
                   </Link>
@@ -107,19 +107,19 @@ export default function Footer() {
                   aria-label={label}
                   className="w-9 h-9 flex items-center justify-center rounded-lg transition-all duration-200 hover:scale-110"
                   style={{
-                    background: 'rgba(255,255,255,0.06)',
-                    border: '1px solid rgba(255,255,255,0.08)',
-                    color: '#9CA3AF',
+                    background: 'var(--control-bg)',
+                    border: '1px solid var(--border-color)',
+                    color: 'var(--text-muted)',
                   }}
                   onMouseEnter={e => {
-                    (e.currentTarget as HTMLElement).style.color = '#F9FAFB';
+                    (e.currentTarget as HTMLElement).style.color = 'var(--text-primary)';
                     (e.currentTarget as HTMLElement).style.borderColor = 'rgba(37,99,235,0.4)';
                     (e.currentTarget as HTMLElement).style.background = 'rgba(37,99,235,0.15)';
                   }}
                   onMouseLeave={e => {
-                    (e.currentTarget as HTMLElement).style.color = '#9CA3AF';
-                    (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.08)';
-                    (e.currentTarget as HTMLElement).style.background = 'rgba(255,255,255,0.06)';
+                    (e.currentTarget as HTMLElement).style.color = 'var(--text-muted)';
+                    (e.currentTarget as HTMLElement).style.borderColor = 'var(--border-color)';
+                    (e.currentTarget as HTMLElement).style.background = 'var(--control-bg)';
                   }}
                 >
                   <Icon size={16} />
@@ -128,7 +128,7 @@ export default function Footer() {
             </div>
             <div className="mt-6 p-4 rounded-xl" style={{ background: 'rgba(37,99,235,0.06)', border: '1px solid rgba(37,99,235,0.12)' }}>
               <p className="text-xs font-medium mb-1" style={{ color: '#60A5FA' }}>Faculty of Technology</p>
-              <p className="text-xs" style={{ color: '#4B5563' }}>
+              <p className="text-xs" style={{ color: 'var(--text-subtle)' }}>
                 Ratmalana, Sri Lanka
               </p>
             </div>
@@ -138,7 +138,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div
           className="mt-10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs"
-          style={{ borderTop: '1px solid rgba(255,255,255,0.06)', color: '#4B5563' }}
+          style={{ borderTop: '1px solid var(--border-color)', color: 'var(--text-subtle)' }}
         >
           <span>© 2026 DatAInspire – AI & Data Science Club, KDU. All Rights Reserved.</span>
           <div className="flex items-center gap-1.5">

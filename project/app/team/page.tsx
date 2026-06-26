@@ -44,7 +44,7 @@ export default function TeamPage() {
   }, [search, role]);
 
   return (
-    <main className="min-h-screen pt-24" style={{ background: '#030712' }}>
+    <main className="min-h-screen pt-24" style={{ background: 'var(--bg-primary)' }}>
       {/* Header */}
       <section className="relative py-16 overflow-hidden">
         <div className="absolute inset-0 grid-bg opacity-30" />
@@ -60,7 +60,7 @@ export default function TeamPage() {
           <h1 className="text-4xl sm:text-6xl font-bold text-white mb-4">
             Meet the <span className="text-gradient">Team</span>
           </h1>
-          <p className="text-base sm:text-lg" style={{ color: '#9CA3AF' }}>
+          <p className="text-base sm:text-lg" style={{ color: 'var(--text-muted)' }}>
             {teamMembers.length} passionate cadets and students building the future of AI together.
           </p>
         </div>
@@ -80,9 +80,9 @@ export default function TeamPage() {
                   onClick={() => setRole(r)}
                   className="px-4 py-2 rounded-xl text-xs font-semibold transition-all duration-200"
                   style={{
-                    background: role === r ? 'rgba(37,99,235,0.2)' : 'rgba(17,24,39,0.7)',
-                    border: role === r ? '1px solid rgba(37,99,235,0.4)' : '1px solid rgba(255,255,255,0.07)',
-                    color: role === r ? '#60A5FA' : '#9CA3AF',
+                    background: role === r ? 'rgba(37,99,235,0.2)' : 'var(--surface-glass-strong)',
+                    border: role === r ? '1px solid rgba(37,99,235,0.4)' : '1px solid var(--border-color)',
+                    color: role === r ? '#60A5FA' : 'var(--text-muted)',
                   }}
                 >
                   {r}
@@ -91,7 +91,7 @@ export default function TeamPage() {
             </div>
           </div>
           {filtered.length < teamMembers.length && (
-            <p className="mt-4 text-sm" style={{ color: '#6B7280' }}>
+            <p className="mt-4 text-sm" style={{ color: 'var(--text-subtle)' }}>
               Showing {filtered.length} of {teamMembers.length} members
             </p>
           )}
@@ -109,14 +109,14 @@ export default function TeamPage() {
             </div>
           ) : (
             <div className="text-center py-20">
-              <p className="text-base" style={{ color: '#9CA3AF' }}>No members found for your search.</p>
+              <p className="text-base" style={{ color: 'var(--text-muted)' }}>No members found for your search.</p>
             </div>
           )}
         </div>
       </section>
 
       {/* Culture */}
-      <section className="py-16 pb-24" style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+      <section className="py-16 pb-24" style={{ borderTop: '1px solid var(--border-color)' }}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div
             ref={culture.ref}
@@ -134,8 +134,8 @@ export default function TeamPage() {
                 key={item.title}
                 className="p-6 rounded-2xl flex flex-col gap-4 transition-all duration-300 hover:-translate-y-1"
                 style={{
-                  background: 'rgba(17,24,39,0.7)',
-                  border: '1px solid rgba(255,255,255,0.07)',
+                  background: 'var(--surface-glass-strong)',
+                  border: '1px solid var(--border-color)',
                   opacity: culture.visible ? 1 : 0,
                   transform: culture.visible ? 'translateY(0)' : 'translateY(20px)',
                   transition: `opacity 0.5s ease ${i * 0.1}s, transform 0.5s ease ${i * 0.1}s`,
@@ -147,7 +147,7 @@ export default function TeamPage() {
                 </div>
                 <div>
                   <h3 className="font-bold text-sm text-white mb-2">{item.title}</h3>
-                  <p className="text-xs leading-relaxed" style={{ color: '#9CA3AF' }}>{item.desc}</p>
+                  <p className="text-xs leading-relaxed" style={{ color: 'var(--text-muted)' }}>{item.desc}</p>
                 </div>
               </div>
             ))}

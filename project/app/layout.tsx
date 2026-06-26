@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Preloader from '@/components/Preloader';
+import ThemeProvider from '@/components/ThemeProvider';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const [loaded, setLoaded] = useState(false);
@@ -15,7 +16,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   }, []);
 
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <title>DatAInspire – KDU AI & Data Science Club</title>
         <meta name="description" content="DatAInspire is the official AI & Data Science Club at General Sir John Kotelawala Defence University. Empowering future innovators in AI, ML, and Data Science." />
@@ -27,21 +28,23 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           rel="stylesheet"
         />
       </head>
-      <body style={{ background: '#030712', color: '#F9FAFB', fontFamily: 'Inter, sans-serif' }}>
-        <Preloader />
-        <div
-          className="min-h-screen flex flex-col"
-          style={{
-            opacity: loaded ? 1 : 0,
-            transition: 'opacity 0.5s ease',
-          }}
-        >
-          <Navbar />
-          <div className="flex-1">
-            {children}
+      <body>
+        <ThemeProvider>
+          <Preloader />
+          <div
+            className="min-h-screen flex flex-col"
+            style={{
+              opacity: loaded ? 1 : 0,
+              transition: 'opacity 0.5s ease',
+            }}
+          >
+            <Navbar />
+            <div className="flex-1">
+              {children}
+            </div>
+            <Footer />
           </div>
-          <Footer />
-        </div>
+        </ThemeProvider>
       </body>
     </html>
   );

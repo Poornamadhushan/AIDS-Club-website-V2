@@ -38,8 +38,8 @@ function CounterItem({ label, value, suffix, index }: { label: string; value: nu
       ref={ref}
       className="flex flex-col items-center gap-2 p-6 rounded-2xl transition-all duration-500 hover:scale-[1.03] cursor-default"
       style={{
-        background: 'rgba(17,24,39,0.6)',
-        border: '1px solid rgba(255,255,255,0.07)',
+        background: 'var(--surface-glass)',
+        border: '1px solid var(--border-color)',
         opacity: animVisible ? 1 : 0,
         transform: animVisible ? 'translateY(0)' : 'translateY(30px)',
         transition: `opacity 0.5s ease ${index * 0.08}s, transform 0.5s ease ${index * 0.08}s`,
@@ -47,11 +47,11 @@ function CounterItem({ label, value, suffix, index }: { label: string; value: nu
     >
       <span
         className="text-4xl lg:text-5xl font-bold tabular-nums"
-        style={{ color: '#F9FAFB', fontFamily: 'JetBrains Mono, monospace' }}
+        style={{ color: 'var(--text-primary)', fontFamily: 'JetBrains Mono, monospace' }}
       >
         {count.toLocaleString()}{suffix}
       </span>
-      <span className="text-sm font-medium text-center" style={{ color: '#9CA3AF' }}>{label}</span>
+      <span className="text-sm font-medium text-center" style={{ color: 'var(--text-muted)' }}>{label}</span>
       <div className="w-8 h-0.5 rounded-full" style={{ background: 'linear-gradient(90deg, #2563EB, #06B6D4)' }} />
     </div>
   );

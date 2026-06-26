@@ -78,10 +78,10 @@ export default function HeroSection() {
             transform: visible ? 'translateY(0)' : 'translateY(30px)',
           }}
         >
-          <span style={{ color: '#F9FAFB' }}>Empowering </span>
+          <span style={{ color: 'var(--text-primary)' }}>Empowering </span>
           <span className="text-gradient">Future Innovators</span>
           <br />
-          <span style={{ color: '#F9FAFB' }}>in </span>
+          <span style={{ color: 'var(--text-primary)' }}>in </span>
           <span className="text-gradient">AI & Data Science</span>
         </h1>
 
@@ -107,7 +107,7 @@ export default function HeroSection() {
         <p
           className="text-base sm:text-lg lg:text-xl max-w-2xl mx-auto leading-relaxed mb-10 transition-all duration-700 delay-200"
           style={{
-            color: '#9CA3AF',
+            color: 'var(--text-muted)',
             opacity: visible ? 1 : 0,
             transform: visible ? 'translateY(0)' : 'translateY(20px)',
           }}
@@ -131,7 +131,7 @@ export default function HeroSection() {
           <Link
             href="/events"
             className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-sm font-semibold transition-all duration-300 hover:scale-105"
-            style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.12)', color: '#D1D5DB' }}
+            style={{ background: 'var(--surface-soft)', border: '1px solid rgba(255,255,255,0.12)', color: 'var(--text-muted)' }}
           >
             Explore Events
             <ArrowRight size={16} style={{ opacity: 0.6 }} />

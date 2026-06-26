@@ -28,7 +28,7 @@ function FAQItem({ question, answer, index }: { question: string; answer: string
       ref={ref}
       className="rounded-xl overflow-hidden transition-all duration-500"
       style={{
-        border: '1px solid rgba(255,255,255,0.07)',
+        border: '1px solid var(--border-color)',
         opacity: visible ? 1 : 0,
         transform: visible ? 'translateY(0)' : 'translateY(15px)',
         transitionDelay: `${index * 0.07}s`,
@@ -36,21 +36,21 @@ function FAQItem({ question, answer, index }: { question: string; answer: string
     >
       <button
         className="w-full flex items-center justify-between p-5 text-left transition-colors"
-        style={{ background: open ? 'rgba(37,99,235,0.08)' : 'rgba(17,24,39,0.6)' }}
+        style={{ background: open ? 'rgba(37,99,235,0.08)' : 'var(--surface-glass)' }}
         onClick={() => setOpen(!open)}
       >
-        <span className="text-sm font-semibold pr-4" style={{ color: '#F9FAFB' }}>{question}</span>
+        <span className="text-sm font-semibold pr-4" style={{ color: 'var(--text-primary)' }}>{question}</span>
         <div style={{ transform: open ? 'rotate(180deg)' : 'rotate(0)', transition: 'transform 0.2s ease', flexShrink: 0 }}>
-          <ChevronDown size={16} style={{ color: '#6B7280' }} />
+          <ChevronDown size={16} style={{ color: 'var(--text-subtle)' }} />
         </div>
       </button>
       <div style={{
         maxHeight: open ? '300px' : '0',
         overflow: 'hidden',
         transition: 'max-height 0.3s ease',
-        background: 'rgba(17,24,39,0.4)',
+        background: 'var(--surface-soft)',
       }}>
-        <p className="px-5 py-4 text-sm leading-relaxed" style={{ color: '#9CA3AF', borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+        <p className="px-5 py-4 text-sm leading-relaxed" style={{ color: 'var(--text-muted)', borderTop: '1px solid var(--border-color)' }}>
           {answer}
         </p>
       </div>
@@ -66,7 +66,7 @@ const contactInfo = [
 ];
 
 const socials = [
-  { label: 'GitHub', color: '#fff', href: 'https://github.com', bg: 'rgba(255,255,255,0.06)' },
+  { label: 'GitHub', color: 'var(--text-primary)', href: 'https://github.com', bg: 'var(--control-bg)' },
   { label: 'LinkedIn', color: '#0A66C2', href: 'https://linkedin.com', bg: 'rgba(10,102,194,0.12)' },
   { label: 'Facebook', color: '#1877F2', href: 'https://facebook.com', bg: 'rgba(24,119,242,0.12)' },
   { label: 'Instagram', color: '#E1306C', href: 'https://instagram.com', bg: 'rgba(225,48,108,0.12)' },
@@ -78,7 +78,7 @@ export default function ContactPage() {
   const faqHeader = useVisible();
 
   return (
-    <main className="min-h-screen pt-24" style={{ background: '#030712' }}>
+    <main className="min-h-screen pt-24" style={{ background: 'var(--bg-primary)' }}>
       {/* Header */}
       <section className="relative py-16 overflow-hidden">
         <div className="absolute inset-0 grid-bg opacity-30" />
@@ -94,7 +94,7 @@ export default function ContactPage() {
           <h1 className="text-4xl sm:text-6xl font-bold text-white mb-4">
             Contact <span className="text-gradient">DatAInspire</span>
           </h1>
-          <p className="text-base sm:text-lg" style={{ color: '#9CA3AF' }}>
+          <p className="text-base sm:text-lg" style={{ color: 'var(--text-muted)' }}>
             Have a question, want to join, or interested in collaboration? We&apos;d love to hear from you.
           </p>
         </div>
@@ -108,8 +108,8 @@ export default function ContactPage() {
             <div
               className="lg:col-span-3 p-8 rounded-2xl transition-all duration-700"
               style={{
-                background: 'rgba(17,24,39,0.7)',
-                border: '1px solid rgba(255,255,255,0.07)',
+                background: 'var(--surface-glass-strong)',
+                border: '1px solid var(--border-color)',
                 opacity: formSection.visible ? 1 : 0,
                 transform: formSection.visible ? 'translateX(0)' : 'translateX(-20px)',
               }}
@@ -127,7 +127,7 @@ export default function ContactPage() {
               }}
             >
               <div className="p-6 rounded-2xl flex flex-col gap-4"
-                style={{ background: 'rgba(17,24,39,0.7)', border: '1px solid rgba(255,255,255,0.07)' }}>
+                style={{ background: 'var(--surface-glass-strong)', border: '1px solid var(--border-color)' }}>
                 <h3 className="font-bold text-base text-white">Contact Information</h3>
                 <div className="flex flex-col gap-4">
                   {contactInfo.map(({ icon: Icon, label, value, href }) => (
@@ -143,8 +143,8 @@ export default function ContactPage() {
                         <Icon size={15} style={{ color: '#60A5FA' }} />
                       </div>
                       <div>
-                        <p className="text-xs" style={{ color: '#6B7280' }}>{label}</p>
-                        <p className="text-sm font-medium transition-colors group-hover:text-white" style={{ color: '#D1D5DB' }}>{value}</p>
+                        <p className="text-xs" style={{ color: 'var(--text-subtle)' }}>{label}</p>
+                        <p className="text-sm font-medium transition-colors group-hover:text-white" style={{ color: 'var(--text-muted)' }}>{value}</p>
                       </div>
                     </a>
                   ))}
@@ -152,7 +152,7 @@ export default function ContactPage() {
               </div>
 
               <div className="p-6 rounded-2xl"
-                style={{ background: 'rgba(17,24,39,0.7)', border: '1px solid rgba(255,255,255,0.07)' }}>
+                style={{ background: 'var(--surface-glass-strong)', border: '1px solid var(--border-color)' }}>
                 <h3 className="font-bold text-base text-white mb-4">Follow Us</h3>
                 <div className="grid grid-cols-2 gap-3">
                   {socials.map(s => (
@@ -175,7 +175,7 @@ export default function ContactPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 pb-24" style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+      <section className="py-16 pb-24" style={{ borderTop: '1px solid var(--border-color)' }}>
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div
             ref={faqHeader.ref}
