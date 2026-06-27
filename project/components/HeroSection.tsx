@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { ArrowRight, ChevronDown, Cpu, Database, Network } from 'lucide-react';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import { assetPath } from '@/lib/assets';
 
 export default function HeroSection() {
   const [visible, setVisible] = useState(false);
@@ -93,7 +94,7 @@ export default function HeroSection() {
           <div className="relative">
             <div className="absolute inset-0 blur-2xl rounded-full" style={{ background: 'rgba(37,99,235,0.3)' }} />
             <Image
-              src="/assets/AIclub3d.png"
+              src={assetPath('/assets/AIclub3d.png')}
               alt="DatAInspire"
               width={80}
               height={80}

@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 import Image from 'next/image';
 import ThemeToggle from '@/components/ThemeToggle';
+import { assetPath } from '@/lib/assets';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -52,7 +53,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5 group">
             <div className="relative w-8 h-8 flex-shrink-0">
-              <Image src="/assets/AIclub3d.png" alt="DatAInspire" fill className="object-contain" />
+              <Image src={assetPath('/assets/AIclub3d.png')} alt="DatAInspire" fill className="object-contain" />
             </div>
             <div className="flex flex-col leading-none">
               <span className="font-bold text-base tracking-tight" style={{ color: 'var(--text-primary)' }}>DatAInspire</span>
@@ -137,7 +138,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between mb-8">
           <div className="flex items-center gap-2.5">
             <div className="relative w-8 h-8">
-              <Image src="/assets/AIclub3d.png" alt="DatAInspire" fill className="object-contain" />
+              <Image src={assetPath('/assets/AIclub3d.png')} alt="DatAInspire" fill className="object-contain" />
             </div>
             <span className="font-bold" style={{ color: 'var(--text-primary)' }}>DatAInspire</span>
           </div>

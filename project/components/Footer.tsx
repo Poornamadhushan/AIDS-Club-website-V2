@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Github, Linkedin, Facebook, Instagram, Mail } from 'lucide-react';
+import { assetPath } from '@/lib/assets';
 
 const quickLinks = [
   { href: '/', label: 'Home' },
@@ -40,7 +41,7 @@ export default function Footer() {
             >
               <div className="relative w-28 h-24">
                 <Image
-                  src="/assets/KDU-LOGO-ORIGINAL-5x4-inch-copy-1.png"
+                  src={assetPath('/assets/KDU-LOGO-ORIGINAL-5x4-inch-copy-1.png')}
                   alt="General Sir John Kotelawala Defence University"
                   fill
                   className="object-contain"
@@ -56,7 +57,7 @@ export default function Footer() {
           <div className="flex flex-col gap-4">
             <Link href="/" className="flex items-center gap-2.5">
               <div className="relative w-9 h-9 flex-shrink-0">
-                <Image src="/assets/AIclub3d.png" alt="DatAInspire" fill className="object-contain" />
+                <Image src={assetPath('/assets/AIclub3d.png')} alt="DatAInspire" fill className="object-contain" />
               </div>
               <div>
                 <div className="font-bold text-lg text-white">DatAInspire</div>
