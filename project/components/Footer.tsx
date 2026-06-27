@@ -40,7 +40,7 @@ export default function Footer() {
             >
               <div className="relative w-28 h-24">
                 <Image
-                  src="/assets/KDU-LOGO-ORIGINAL-5x4-inch-copy_(1).png"
+                  src="/assets/KDU-LOGO-ORIGINAL-5x4-inch-copy-1.png"
                   alt="General Sir John Kotelawala Defence University"
                   fill
                   className="object-contain"

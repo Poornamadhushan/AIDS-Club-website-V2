@@ -68,7 +68,7 @@ export default function Preloader() {
             <div className="absolute inset-0 rounded-2xl border border-blue-500/30 animate-pulse" />
             <div className="absolute inset-0 rounded-2xl" style={{ background: 'rgba(37,99,235,0.08)' }} />
             <Image
-              src="/AIclub3d.png"
+              src="/assets/AIclub3d.png"
               alt="DatAInspire Logo"
               width={56}
               height={56}
