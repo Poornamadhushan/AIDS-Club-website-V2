@@ -228,7 +228,6 @@ export const events: Event[] = [
     category: 'Ceremony',
     image: 'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=800',
     status: 'upcoming',
-    registerUrl: '#',
   },
   {
     id: 5,
@@ -263,7 +262,6 @@ export const events: Event[] = [
     category: 'Sports',
     image: 'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=800',
     status: 'upcoming',
-    registerUrl: '#',
   },
 ];
 
