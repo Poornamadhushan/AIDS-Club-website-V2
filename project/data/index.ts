@@ -300,8 +300,8 @@ export const stats: Stat[] = [
 ];
 
 export const galleryImages = [
-  { src: '/AIDS-Club-website-V2/assets/DD2025-01.jpeg', alt: 'Data Odyssey 2025' },
-  { src: '/AIDS-Club-website-V2/assets/DD2025-03.jpeg', alt: 'Data Odyssey 2025' },
+  { src: '/AIDS-Club-website-V2/assets/DO2025-1.jpeg', alt: 'Data Odyssey 2025' },
+  { src: '/AIDS-Club-website-V2/assets/DO2025-3.jpeg', alt: 'Data Odyssey 2025' },
   { src: '/AIDS-Club-website-V2/assets/DD2025-01.jpeg', alt: 'Data Dash 2025' },
   { src: '/AIDS-Club-website-V2/assets/DSC00666.jpg', alt: 'Data Dash 2025' },
   { src: '/AIDS-Club-website-V2/assets/PP.jpeg', alt: 'Data Connect' },
