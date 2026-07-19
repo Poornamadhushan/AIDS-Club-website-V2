@@ -248,7 +248,7 @@ export const events: Event[] = [
     venue: 'FMSH',
     description: 'An inter-university competition bringing together top talent from across the country to compete in data science and AI challenges.',
     category: 'Competition',
-    image: '/assets/data-odyssey-2026.jpeg',
+    image: '/AIDS-Club-website-V2/assets/data-odyssey-2026.jpeg',
     status: 'upcoming',
     registerUrl: 'https://poornamadhushan.github.io/dataodssey/',
   },
