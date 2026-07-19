@@ -36,8 +36,7 @@ export default function TeamPage() {
   const filtered = useMemo(() => {
     return teamMembers.filter(m => {
       const matchSearch = m.name.toLowerCase().includes(search.toLowerCase()) ||
-        m.position.toLowerCase().includes(search.toLowerCase()) ||
-        m.interests.some(i => i.toLowerCase().includes(search.toLowerCase()));
+        m.position.toLowerCase().includes(search.toLowerCase());
       const matchRole = role === 'All' || m.position === role;
       return matchSearch && matchRole;
     });
@@ -71,7 +70,7 @@ export default function TeamPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row gap-4">
             <div className="w-full sm:w-72">
-              <SearchBar value={search} onChange={setSearch} placeholder="Search by name or interest..." />
+              <SearchBar value={search} onChange={setSearch} placeholder="Search by name or role..." />
             </div>
             <div className="flex gap-2 flex-wrap">
               {['All', 'President', 'Vice President', 'Committee Member'].map(r => (
