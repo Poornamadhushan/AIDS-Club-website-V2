@@ -237,7 +237,7 @@ export const events: Event[] = [
     venue: 'FGS',
     description: 'A seminar day with expert sessions, panel discussions, and networking — the final lead-up before the Grand Finale.',
     category: 'Seminar',
-    image: 'https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/AIDS-Club-website-V2/assets/data-day-2026.PNG',
     status: 'upcoming',
   },
   {
