@@ -300,10 +300,10 @@ export const stats: Stat[] = [
 ];
 
 export const galleryImages = [
-  { src: 'https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=600', alt: 'Team Workshop' },
-  { src: 'https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=600', alt: 'Hackathon' },
-  { src: 'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=600', alt: 'AI Bootcamp' },
-  { src: 'https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=600', alt: 'Coding Session' },
-  { src: 'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=600', alt: 'Collaboration' },
-  { src: 'https://images.pexels.com/photos/4164418/pexels-photo-4164418.jpeg?auto=compress&cs=tinysrgb&w=600', alt: 'Python Workshop' },
+  { src: '/AIDS-Club-website-V2/assets/DD2025-01.jpeg', alt: 'Data Odyssey 2025' },
+  { src: '/AIDS-Club-website-V2/assets/DD2025-03.jpeg', alt: 'Data Odyssey 2025' },
+  { src: '/AIDS-Club-website-V2/assets/DD2025-01.jpeg', alt: 'Data Dash 2025' },
+  { src: '/AIDS-Club-website-V2/assets/DSC00666.jpg', alt: 'Data Dash 2025' },
+  { src: '/AIDS-Club-website-V2/assets/PP.jpeg', alt: 'Data Connect' },
+  { src: '/AIDS-Club-website-V2/assets/DSC00669.jpg', alt: 'Data Dash 2025' },
 ];
