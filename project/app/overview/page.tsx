@@ -82,7 +82,7 @@ export default function OverviewPage() {
               {[
                 { label: 'Founded', value: '2023', color: '#2563EB' },
                 { label: 'University', value: 'KDU', color: '#06B6D4' },
-                { label: 'Faculty', value: 'Technology', color: '#4F46E5' },
+                { label: 'Faculty', value: 'Management', color: '#4F46E5' },
                 { label: 'Focus', value: 'AI & DS', color: '#10b981' },
               ].map((item) => (
                 <div
