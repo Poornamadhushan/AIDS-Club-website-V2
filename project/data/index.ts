@@ -9,7 +9,7 @@ export const teamMembers: TeamMember[] = [
     image: '/assets/1.jpeg',
     github: 'https://github.com/Minuka8',
     linkedin: 'https://www.linkedin.com/in/minuka-wickramasinghe?utm_source=share_via&utm_content=profile&utm_medium=member_ios',
-    interests: ['Deep Learning', 'AI Research', 'NLP'],
+    
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ export const teamMembers: TeamMember[] = [
     image: '/assets/2.jpeg',
     github: 'https://github.com/Sanjaya0028',
     linkedin: 'https://www.linkedin.com/in/sanjaya-gunasekare?utm_source=share_via&utm_content=profile&utm_medium=member_ios',
-    interests: ['Computer Vision', 'ML Ops', 'Python'],
+    
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ export const teamMembers: TeamMember[] = [
     image: '/assets/3.jpg',
     github: 'https://github.com/seshanperera2004',
     linkedin: 'https://www.linkedin.com/in/seshan-perera-51b79832b',
-    interests: ['Data Science', 'Statistics', 'R'],
+   
   },
   {
     id: 4,
@@ -39,7 +39,7 @@ export const teamMembers: TeamMember[] = [
     image: '/assets/4.jpg',
     github: 'https://github.com/ravindu57',
     linkedin: 'https://www.linkedin.com/in/ravindu-prabhashana-97123634b?utm_source=share_via&utm_content=profile&utm_medium=member_android',
-    interests: ['Data Engineering', 'Cloud', 'Web Dev'],
+    
   },
   {
     id: 5,
@@ -49,7 +49,7 @@ export const teamMembers: TeamMember[] = [
     image: '/assets/5.jpg',
     github: 'https://github.com/Cassandra-Delima',
     linkedin: 'https://www.linkedin.com/in/a-a-cassandra-delima-69542234b?utm_source=share_via&utm_content=profile&utm_medium=member_android',
-    interests: ['Cloud', 'MLOps', 'DevOps'],
+    
   },
   {
     id: 6,
@@ -59,7 +59,7 @@ export const teamMembers: TeamMember[] = [
     image: '/assets/6.jpg',
     github: 'https://github.com/chamudinanayakkara2004-rgb',
     linkedin: 'www.linkedin.com/in/chamudi-nanayakkara-155759228',
-    interests: ['AI Research', 'Federated Learning', 'Security'],
+   
   },
   {
     id: 7,
@@ -69,7 +69,7 @@ export const teamMembers: TeamMember[] = [
     image: '/assets/7.jpeg',
     github: 'https://github.com/githmawickramasooriya',
     linkedin: 'https://www.linkedin.com/in/githma-wickramasooriya-68a94b336/',
-    interests: ['Web Dev', 'AI', 'Event Management'],
+  
   },
   {
     id: 8,
@@ -79,7 +79,7 @@ export const teamMembers: TeamMember[] = [
     image: '/assets/8.jpeg',
     github: 'https://github.com/vidu-subasingha',
     linkedin: 'linkedin.com/in/vidushi-subasingha-516138339',
-    interests: ['NLP', 'Linguistics', 'Python'],
+   
   },
   {
     id: 9,
@@ -89,17 +89,17 @@ export const teamMembers: TeamMember[] = [
     image: '/assets/9.jpeg',
     github: 'https://github.com',
     linkedin: 'https://linkedin.com',
-    interests: ['Cyber Security', 'AI', 'Threat Intel'],
+    
   },
   {
     id: 10,
-    name: 'Amaya Senanayake',
-    position: 'Committee Member',
-    funFact: 'Reinforcement learning researcher interested in autonomous systems and robotic decision-making. Active contributor to open-source AI frameworks.',
+    name: 'Ashfa Naseerdeen',
+    position: 'Vice secretary',
+    funFact: 'I perform my best under pressure and stay calm in challenging situations. I enjoy learning and growing through new experiences.',
     image: 'https://images.pexels.com/photos/1065084/pexels-photo-1065084.jpeg?auto=compress&cs=tinysrgb&w=300',
-    github: 'https://github.com',
-    linkedin: 'https://linkedin.com',
-    interests: ['Reinforcement Learning', 'Robotics', 'ML'],
+    github: 'https://github.com/Asfanaseerdeen',
+    linkedin: 'https://www.linkedin.com/in/asfa-naseerdeen-4329a5321',
+ 
   },
   {
     id: 11,
@@ -109,7 +109,7 @@ export const teamMembers: TeamMember[] = [
     image: '/assets/11.jpg',
     github: 'https://github.com/desandudehan9',
     linkedin: 'https://www.linkedin.com/in/godage-dehan-desandu-464366373?utm_source=share_via&utm_content=profile&utm_medium=member_android',
-    interests: ['Data Viz', 'BI', 'Tableau'],
+ 
   },
   {
     id: 12,
@@ -119,7 +119,7 @@ export const teamMembers: TeamMember[] = [
     image: '/assets/12.jpg',
     github: 'https://github.com/Hasara-V',
     linkedin: 'www.linkedin.com/in/vishmi-hasara-68290530a',
-    interests: ['Healthcare AI', 'Data Science', 'Research'],
+   
   },
   {
     id: 13,
@@ -129,7 +129,7 @@ export const teamMembers: TeamMember[] = [
     image: '/assets/13.png',
     github: 'https://github.com/lasiru01',
     linkedin: 'https://www.linkedin.com/in/lasiru-kavihara/',
-    interests: ['Edge AI', 'IoT', 'Embedded Systems'],
+   
   },
 
   {
@@ -140,7 +140,7 @@ export const teamMembers: TeamMember[] = [
     image: '/assets/15.jpeg',
     github: 'https://github.com/umayanganithewsarani2121-afk',
     linkedin: 'https://www.linkedin.com/in/umayangani-t-chandrasiri/',
-    interests: ['Mobile AI', 'TensorFlow', 'Flutter'],
+    
   },
   {
     id: 16,
@@ -150,7 +150,7 @@ export const teamMembers: TeamMember[] = [
     image: '/assets/16.jpeg',
     github: 'https://github.com/Indu222325',
     linkedin: 'https://www.linkedin.com/in/induharsha-isadhara-8461973b1?utm_source=share_via&utm_content=profile&utm_medium=member_ios',
-    interests: ['Graph ML', 'Network Science', 'PyTorch'],
+    
   },
   {
     id: 17,
@@ -160,7 +160,7 @@ export const teamMembers: TeamMember[] = [
     image: '/assets/17.jpeg',
     github: 'https://github.com/sanithma',
     linkedin: 'https://www.linkedin.com/in/sanithma-fernando-b83451355?utm_source=share_via&utm_content=profile&utm_medium=member_ios',
-    interests: ['Time Series', 'Anomaly Detection', 'Forecasting'],
+  
   },
   {
     id: 18,
@@ -170,7 +170,7 @@ export const teamMembers: TeamMember[] = [
     image: '/assets/18.jpeg',
     github: 'https://github.com',
     linkedin: 'https://www.linkedin.com/in/inuka-prasad-06847b372',
-    interests: ['Multimodal AI', 'Audio ML', 'Research'],
+    
   },
   {
     id: 19,
@@ -180,7 +180,7 @@ export const teamMembers: TeamMember[] = [
     image: '/assets/19.jpeg',
     github: 'https://github.com/Poornamadhushan',
     linkedin: 'https://www.linkedin.com/in/poorna-madhushan/',
-    interests: ['Quantum ML','Optimisation'],
+    
   },
 ];
 
