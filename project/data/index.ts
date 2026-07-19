@@ -96,7 +96,7 @@ export const teamMembers: TeamMember[] = [
     name: 'Ashfa Naseerdeen',
     position: 'Vice secretary',
     funFact: 'I perform my best under pressure and stay calm in challenging situations. I enjoy learning and growing through new experiences.',
-    image: 'https://images.pexels.com/photos/1065084/pexels-photo-1065084.jpeg?auto=compress&cs=tinysrgb&w=300',
+    image: 'https://github.com/user-attachments/assets/19209ae9-4ce6-488c-8611-907012848e08',
     github: 'https://github.com/Asfanaseerdeen',
     linkedin: 'https://www.linkedin.com/in/asfa-naseerdeen-4329a5321',
  

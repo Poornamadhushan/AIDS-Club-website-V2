@@ -6,7 +6,7 @@ export interface TeamMember {
   image: string;
   github: string;
   linkedin: string;
-  interests: string[];
+  interests?: string[];
 }
 
 export interface Event {

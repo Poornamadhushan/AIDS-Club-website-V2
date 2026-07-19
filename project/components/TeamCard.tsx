@@ -1,19 +1,9 @@
 'use client';
 
-import { Github, Linkedin, Brain, Cloud, Shield, Code, BarChart, Atom } from 'lucide-react';
+import { Github, Linkedin } from 'lucide-react';
 import { TeamMember } from '@/types';
 import { useRef, useState, useEffect } from 'react';
 import { assetPath } from '@/lib/assets';
-
-const interestIcons: Record<string, React.ReactNode> = {
-  'AI': <Brain size={11} />, 'AI Research': <Brain size={11} />, 'Deep Learning': <Brain size={11} />,
-  'ML': <Brain size={11} />, 'NLP': <Brain size={11} />, 'LLMs': <Brain size={11} />,
-  'Cloud': <Cloud size={11} />, 'MLOps': <Cloud size={11} />, 'DevOps': <Cloud size={11} />,
-  'Cyber Security': <Shield size={11} />, 'Security': <Shield size={11} />,
-  'Web Dev': <Code size={11} />, 'Python': <Code size={11} />,
-  'Data Science': <BarChart size={11} />, 'Data Viz': <BarChart size={11} />,
-  'Quantum ML': <Atom size={11} />,
-};
 
 export default function TeamCard({ member, index = 0 }: { member: TeamMember; index?: number }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -70,18 +60,19 @@ export default function TeamCard({ member, index = 0 }: { member: TeamMember; in
         <p className="text-xs leading-relaxed line-clamp-3" style={{ color: 'var(--text-muted)' }}>{member.funFact}</p>
 
         {/* Interests */}
-        <div className="flex flex-wrap justify-center gap-1.5">
-          {member.interests.slice(0, 3).map((interest) => (
-            <span
-              key={interest}
-              className="flex items-center gap-1 px-2 py-0.5 rounded-md text-xs"
-              style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid var(--border-color)', color: 'var(--text-muted)' }}
-            >
-              {interestIcons[interest] || <Brain size={11} />}
-              {interest}
-            </span>
-          ))}
-        </div>
+        {member.interests && member.interests.length > 0 && (
+          <div className="flex flex-wrap justify-center gap-1.5">
+            {member.interests.slice(0, 3).map((interest) => (
+              <span
+                key={interest}
+                className="px-2 py-0.5 rounded-md text-xs"
+                style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid var(--border-color)', color: 'var(--text-muted)' }}
+              >
+                {interest}
+              </span>
+            ))}
+          </div>
+        )}
 
         {/* Social links */}
         <div className="flex items-center gap-3 w-full justify-center pt-3" style={{ borderTop: '1px solid var(--border-color)' }}>

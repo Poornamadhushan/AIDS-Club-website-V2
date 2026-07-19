@@ -37,7 +37,7 @@ export default function TeamPage() {
     return teamMembers.filter(m => {
       const matchSearch = m.name.toLowerCase().includes(search.toLowerCase()) ||
         m.position.toLowerCase().includes(search.toLowerCase()) ||
-        m.interests.some(i => i.toLowerCase().includes(search.toLowerCase()));
+        (m.interests?.some(i => i.toLowerCase().includes(search.toLowerCase())) ?? false);
       const matchRole = role === 'All' || m.position === role;
       return matchSearch && matchRole;
     });
