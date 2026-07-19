@@ -193,7 +193,7 @@ export const events: Event[] = [
     venue: 'FMSH',
     description: 'An inter-faculty competition that brought together the brightest minds across faculties to compete in data science and AI challenges.',
     category: 'Competition',
-    image: 'https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/AIDS-Club-website-V2/assets/DO2025-2.jpeg',
     status: 'past',
   },
   {
@@ -204,7 +204,7 @@ export const events: Event[] = [
     venue: 'KDU - Soccer Ground',
     description: 'A soft ball cricket tournament bringing club members together for a day of sport, teamwork, and friendly competition.',
     category: 'Sports',
-    image: 'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/AIDS-Club-website-V2/assets/DD2025-01.jpeg',
     status: 'past',
   },
   {
@@ -215,7 +215,7 @@ export const events: Event[] = [
     venue: 'Online',
     description: 'The launch of the Data Connect Online Series organized by AI & Data Science Club, starting with an insightful session on AI Fundamentals with Microsoft AI.',
     category: 'Online Series',
-    image: 'https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/AIDS-Club-website-V2/assets/PP.jpeg',
     status: 'past',
   },
   {
@@ -260,7 +260,7 @@ export const events: Event[] = [
     venue: 'TBA',
     description: 'A soft ball cricket tournament bringing club members together for a day of sport, teamwork, and friendly competition.',
     category: 'Sports',
-    image: 'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/AIDS-Club-website-V2/assets/DSC00669.jpg',
     status: 'upcoming',
   },
 ];
