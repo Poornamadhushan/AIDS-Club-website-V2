@@ -226,7 +226,7 @@ export const events: Event[] = [
     venue: 'FDSS Auditorium',
     description: 'The official Club Installation ceremony, marking the beginning of a new chapter for DatAInspire.',
     category: 'Ceremony',
-    image: 'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/AIDS-Club-website-V2/assets/Data-Renaissance.png',
     status: 'upcoming',
   },
   {
