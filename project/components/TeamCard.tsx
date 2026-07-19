@@ -65,7 +65,7 @@ export default function TeamCard({ member, index = 0 }: { member: TeamMember; in
         </div>
 
         {/* Bio */}
-        <p className="text-xs leading-relaxed line-clamp-3" style={{ color: 'var(--text-muted)' }}>{member.bio}</p>
+        <p className="text-xs leading-relaxed line-clamp-3" style={{ color: 'var(--text-muted)' }}>{member.funFact}</p>
 
         {/* Interests */}
         <div className="flex flex-wrap justify-center gap-1.5">
