@@ -228,7 +228,6 @@ export const events: Event[] = [
     category: 'Ceremony',
     image: 'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=800',
     status: 'upcoming',
-    registerUrl: '#',
   },
   {
     id: 5,
@@ -240,7 +239,6 @@ export const events: Event[] = [
     category: 'Seminar',
     image: 'https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=800',
     status: 'upcoming',
-    registerUrl: '#',
   },
   {
     id: 6,
@@ -252,7 +250,7 @@ export const events: Event[] = [
     category: 'Competition',
     image: 'https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=800',
     status: 'upcoming',
-    registerUrl: '#',
+    registerUrl: 'https://poornamadhushan.github.io/dataodssey/',
   },
   {
     id: 7,
@@ -264,7 +262,6 @@ export const events: Event[] = [
     category: 'Sports',
     image: 'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=800',
     status: 'upcoming',
-    registerUrl: '#',
   },
 ];
 
