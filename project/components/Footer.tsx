@@ -128,7 +128,7 @@ export default function Footer() {
               ))}
             </div>
             <div className="mt-6 p-4 rounded-xl" style={{ background: 'rgba(37,99,235,0.06)', border: '1px solid rgba(37,99,235,0.12)' }}>
-              <p className="text-xs font-medium mb-1" style={{ color: '#60A5FA' }}>Faculty of Technology</p>
+              <p className="text-xs font-medium mb-1" style={{ color: '#60A5FA' }}>Faculty of Management</p>
               <p className="text-xs" style={{ color: 'var(--text-subtle)' }}>
                 Ratmalana, Sri Lanka
               </p>
