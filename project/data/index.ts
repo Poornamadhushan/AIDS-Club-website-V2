@@ -240,7 +240,6 @@ export const events: Event[] = [
     category: 'Seminar',
     image: 'https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=800',
     status: 'upcoming',
-    registerUrl: '#',
   },
   {
     id: 6,
@@ -250,9 +249,9 @@ export const events: Event[] = [
     venue: 'FMSH',
     description: 'An inter-university competition bringing together top talent from across the country to compete in data science and AI challenges.',
     category: 'Competition',
-    image: 'https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/AIDS-Club-website-V2/assets/data-odyssey-2026.jpeg',
     status: 'upcoming',
-    registerUrl: '#',
+    registerUrl: 'https://poornamadhushan.github.io/dataodssey/',
   },
   {
     id: 7,
