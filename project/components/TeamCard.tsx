@@ -3,6 +3,7 @@
 import { Github, Linkedin, Brain, Cloud, Shield, Code, BarChart, Atom } from 'lucide-react';
 import { TeamMember } from '@/types';
 import { useRef, useState, useEffect } from 'react';
+import { assetPath } from '@/lib/assets';
 
 const interestIcons: Record<string, React.ReactNode> = {
   'AI': <Brain size={11} />, 'AI Research': <Brain size={11} />, 'Deep Learning': <Brain size={11} />,
@@ -17,6 +18,7 @@ const interestIcons: Record<string, React.ReactNode> = {
 export default function TeamCard({ member, index = 0 }: { member: TeamMember; index?: number }) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
+  const imageSrc = member.image.startsWith('http') ? member.image : assetPath(member.image);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -47,7 +49,7 @@ export default function TeamCard({ member, index = 0 }: { member: TeamMember; in
         {/* Image */}
         <div className="relative">
           <div className="w-20 h-20 rounded-2xl overflow-hidden ring-2 ring-transparent group-hover:ring-blue-500/30 transition-all duration-300">
-            <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
+            <img src={imageSrc} alt={member.name} className="w-full h-full object-cover" />
           </div>
           <div className="absolute -bottom-1 -right-1 w-5 h-5 rounded-full flex items-center justify-center"
             style={{ background: 'linear-gradient(135deg, #2563EB, #06B6D4)' }}>
