@@ -2,7 +2,7 @@ export interface TeamMember {
   id: number;
   name: string;
   position: string;
-  bio: string;
+  funFact: string;
   image: string;
   github: string;
   linkedin: string;
