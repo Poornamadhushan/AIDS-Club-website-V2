@@ -6,6 +6,7 @@ export interface TeamMember {
   image: string;
   github: string;
   linkedin: string;
+  websiteUrl?: string;
   interests?: string[];
 }
 

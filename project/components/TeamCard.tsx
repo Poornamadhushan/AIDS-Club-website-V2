@@ -1,6 +1,6 @@
 'use client';
 
-import { Github, Linkedin } from 'lucide-react';
+import { ExternalLink, Github, Linkedin } from 'lucide-react';
 import { TeamMember } from '@/types';
 import { useRef, useState, useEffect } from 'react';
 import { assetPath } from '@/lib/assets';
@@ -75,7 +75,7 @@ export default function TeamCard({ member, index = 0 }: { member: TeamMember; in
         )}
 
         {/* Social links */}
-        <div className="flex items-center gap-3 w-full justify-center pt-3" style={{ borderTop: '1px solid var(--border-color)' }}>
+        <div className="flex items-center gap-3 w-full justify-center pt-3 flex-wrap" style={{ borderTop: '1px solid var(--border-color)' }}>
           <a
             href={member.github} target="_blank" rel="noopener noreferrer"
             aria-label={`${member.name} GitHub`}
@@ -92,6 +92,18 @@ export default function TeamCard({ member, index = 0 }: { member: TeamMember; in
           >
             <Linkedin size={12} /><span>LinkedIn</span>
           </a>
+          {member.websiteUrl && (
+            <a
+              href={member.websiteUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`${member.name} Website`}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs transition-all duration-200 hover:scale-105"
+              style={{ background: 'rgba(16,185,129,0.1)', color: '#34D399', border: '1px solid rgba(16,185,129,0.2)' }}
+            >
+              <ExternalLink size={12} /><span>Website</span>
+            </a>
+          )}
         </div>
       </div>
     </div>

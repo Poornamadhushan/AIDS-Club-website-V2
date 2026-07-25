@@ -27,6 +27,9 @@ const cultureItems = [
   { icon: Heart, title: 'Community Spirit', desc: 'We support each other beyond academics, building friendships and professional networks for life.', color: '#10b981' },
 ];
 
+const teamOrder = [1, 3, 2, 9, 10, 13, 17, 5, 16, 12, 19, 15, 7, 6, 4, 8, 18, 11];
+const teamOrderIndex = new Map(teamOrder.map((id, index) => [id, index]));
+
 export default function TeamPage() {
   const [search, setSearch] = useState('');
   const [role, setRole] = useState('All');
@@ -34,13 +37,15 @@ export default function TeamPage() {
   const culture = useVisible();
 
   const filtered = useMemo(() => {
-    return teamMembers.filter(m => {
-      const matchSearch = m.name.toLowerCase().includes(search.toLowerCase()) ||
-        m.position.toLowerCase().includes(search.toLowerCase()) ||
-        (m.interests?.some(i => i.toLowerCase().includes(search.toLowerCase())) ?? false);
-      const matchRole = role === 'All' || m.position === role;
-      return matchSearch && matchRole;
-    });
+    return teamMembers
+      .filter(m => {
+        const matchSearch = m.name.toLowerCase().includes(search.toLowerCase()) ||
+          m.position.toLowerCase().includes(search.toLowerCase()) ||
+          (m.interests?.some(i => i.toLowerCase().includes(search.toLowerCase())) ?? false);
+        const matchRole = role === 'All' || m.position === role;
+        return matchSearch && matchRole;
+      })
+      .sort((a, b) => (teamOrderIndex.get(a.id) ?? Number.MAX_SAFE_INTEGER) - (teamOrderIndex.get(b.id) ?? Number.MAX_SAFE_INTEGER));
   }, [search, role]);
 
   return (
