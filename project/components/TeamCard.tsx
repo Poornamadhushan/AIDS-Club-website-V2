@@ -101,7 +101,7 @@ export default function TeamCard({ member, index = 0 }: { member: TeamMember; in
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs transition-all duration-200 hover:scale-105"
               style={{ background: 'rgba(16,185,129,0.1)', color: '#34D399', border: '1px solid rgba(16,185,129,0.2)' }}
             >
-              <ExternalLink size={12} /><span>Website</span>
+              <ExternalLink size={12} /><span>Datavoyager</span>
             </a>
           )}
         </div>
