@@ -32,21 +32,18 @@ const teamOrderIndex = new Map(teamOrder.map((id, index) => [id, index]));
 
 export default function TeamPage() {
   const [search, setSearch] = useState('');
-  const [role, setRole] = useState('All');
   const header = useVisible();
   const culture = useVisible();
 
   const filtered = useMemo(() => {
     return teamMembers
       .filter(m => {
-        const matchSearch = m.name.toLowerCase().includes(search.toLowerCase()) ||
+        return m.name.toLowerCase().includes(search.toLowerCase()) ||
           m.position.toLowerCase().includes(search.toLowerCase()) ||
           (m.interests?.some(i => i.toLowerCase().includes(search.toLowerCase())) ?? false);
-        const matchRole = role === 'All' || m.position === role;
-        return matchSearch && matchRole;
       })
       .sort((a, b) => (teamOrderIndex.get(a.id) ?? Number.MAX_SAFE_INTEGER) - (teamOrderIndex.get(b.id) ?? Number.MAX_SAFE_INTEGER));
-  }, [search, role]);
+  }, [search]);
 
   return (
     <main className="min-h-screen pt-24" style={{ background: 'var(--bg-primary)' }}>
@@ -74,26 +71,8 @@ export default function TeamPage() {
       {/* Filters */}
       <section className="pb-8">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row gap-4">
-            <div className="w-full sm:w-72">
-              <SearchBar value={search} onChange={setSearch} placeholder="Search by name or interest..." />
-            </div>
-            <div className="flex gap-2 flex-wrap">
-              {['All', 'President', 'Vice President', 'Committee Member'].map(r => (
-                <button
-                  key={r}
-                  onClick={() => setRole(r)}
-                  className="px-4 py-2 rounded-xl text-xs font-semibold transition-all duration-200"
-                  style={{
-                    background: role === r ? 'rgba(37,99,235,0.2)' : 'var(--surface-glass-strong)',
-                    border: role === r ? '1px solid rgba(37,99,235,0.4)' : '1px solid var(--border-color)',
-                    color: role === r ? '#60A5FA' : 'var(--text-muted)',
-                  }}
-                >
-                  {r}
-                </button>
-              ))}
-            </div>
+          <div className="w-full sm:w-72">
+            <SearchBar value={search} onChange={setSearch} placeholder="Search by name or interest..." />
           </div>
           {filtered.length < teamMembers.length && (
             <p className="mt-4 text-sm" style={{ color: 'var(--text-subtle)' }}>
