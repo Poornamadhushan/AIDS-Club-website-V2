@@ -25,7 +25,7 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: 3,
-    name: 'seshan Perera',
+    name: 'Seshan Perera',
     position: 'Vice President',
     funFact: 'I enjoy building things through coding and love working with electronics and mechanical systems, always looking for opportunities to solve real-world problems. Outside of academics, I have represented my university in cricket, swimming, and water polo, which has strengthened my teamwork, discipline, and leadership skills.',
     image: '/assets/3.jpg',
@@ -48,7 +48,7 @@ export const teamMembers: TeamMember[] = [
   {
     id: 5,
     name: 'Cassandra Delima',
-    position: 'editor',
+    position: 'Editor',
     funFact: 'Cloud architect and MLOps specialist experienced in deploying AI solutions on Azure and AWS. Drives the club\'s cloud-first technology strategy.',
     image: '/assets/5.jpg',
     github: 'https://github.com/Cassandra-Delima',
@@ -103,7 +103,7 @@ export const teamMembers: TeamMember[] = [
   {
     id: 10,
     name: 'Ashfa Naseerdeen',
-    position: 'Vice secretary',
+    position: 'Vice Secretary',
     funFact: 'I perform my best under pressure and stay calm in challenging situations. I enjoy learning and growing through new experiences.',
     image: 'https://github.com/user-attachments/assets/19209ae9-4ce6-488c-8611-907012848e08',
     github: 'https://github.com/Asfanaseerdeen',
@@ -114,7 +114,7 @@ export const teamMembers: TeamMember[] = [
   {
     id: 11,
     name: 'Dehan Desandu Godage',
-    position: 'Assistance sergeant at arms ',
+    position: 'Assistance sergeant at Arms ',
     funFact: 'Iam a friendly and approachable person who enjoys playing video games in my free time. I also played sports such as badminton, chess, karate, cricket, boxing, and rugby, which keep me active and competitive. I enjoy both strategic thinking and staying physically active in a balanced and fun way.',
     image: '/assets/11.jpg',
     github: 'https://github.com/desandudehan9',
@@ -147,7 +147,7 @@ export const teamMembers: TeamMember[] = [
 
   {
     id: 15,
-    name: 'Umayangani T. Chandrasiri',
+    name: 'Umayangani Chandrasiri',
     position: 'Assistance Web Master',
     funFact: 'U.Ts™ | Beyond the OrdinaryI dont chase trends; I create my own trajectory. Through intelligence, innovation, and curiosity, I shape a future where possibilities become reality.A mind driven by data. A vision inspired by the skies. A journey defined by excellence.',
     image: '/assets/15.jpeg',
@@ -192,7 +192,7 @@ export const teamMembers: TeamMember[] = [
   {
     id: 19,
     name: 'Poorna Madhushan',
-    position: 'Web master',
+    position: 'Web Master',
     funFact: 'Python wasnt named after the snake. It was named after the British comedy show Monty Python and the Holy Grail.',
     image: '/assets/19.jpeg',
     github: 'https://github.com/Poornamadhushan',
