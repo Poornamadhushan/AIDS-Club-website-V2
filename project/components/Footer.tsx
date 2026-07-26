@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Github, Linkedin, Facebook, Instagram, Mail } from 'lucide-react';
+import { Linkedin, Facebook, Instagram, Mail } from 'lucide-react';
 import { assetPath } from '@/lib/assets';
 
 const quickLinks = [
@@ -12,10 +12,9 @@ const quickLinks = [
 ];
 
 const socials = [
-  { icon: Github, href: 'https://github.com', label: 'GitHub' },
-  { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-  { icon: Facebook, href: 'https://facebook.com', label: 'Facebook' },
-  { icon: Instagram, href: 'https://instagram.com', label: 'Instagram' },
+  { icon: Linkedin, href: 'https://www.linkedin.com/company/kdudatainspire/', label: 'LinkedIn' },
+  { icon: Facebook, href: 'https://web.facebook.com/datasciensekdu', label: 'Facebook' },
+  { icon: Instagram, href: 'https://www.instagram.com/datainspires_kdu', label: 'Instagram' },
 ];
 
 export default function Footer() {

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import { Mail, Github, Linkedin, MapPin, ChevronDown } from 'lucide-react';
+import { Mail, Linkedin, Facebook, Instagram, MapPin, ChevronDown } from 'lucide-react';
 import ContactForm from '@/components/ContactForm';
 import { faqs } from '@/data';
 
@@ -60,16 +60,16 @@ function FAQItem({ question, answer, index }: { question: string; answer: string
 
 const contactInfo = [
   { icon: Mail, label: 'Email', value: 'datainspire@kdu.ac.lk', href: 'mailto:datainspire@kdu.ac.lk' },
-  { icon: Github, label: 'GitHub', value: 'github.com/datainspire-kdu', href: 'https://github.com' },
-  { icon: Linkedin, label: 'LinkedIn', value: 'linkedin.com/company/datainspire', href: 'https://linkedin.com' },
+  { icon: Linkedin, label: 'LinkedIn', value: 'linkedin.com/company/kdudatainspire', href: 'https://www.linkedin.com/company/kdudatainspire/' },
+  { icon: Facebook, label: 'Facebook', value: 'web.facebook.com/datasciensekdu', href: 'https://web.facebook.com/datasciensekdu' },
+  { icon: Instagram, label: 'Instagram', value: 'instagram.com/datainspires_kdu', href: 'https://www.instagram.com/datainspires_kdu' },
   { icon: MapPin, label: 'University', value: 'KDU, Ratmalana, Sri Lanka', href: '#' },
 ];
 
 const socials = [
-  { label: 'GitHub', color: 'var(--text-primary)', href: 'https://github.com', bg: 'var(--control-bg)' },
-  { label: 'LinkedIn', color: '#0A66C2', href: 'https://linkedin.com', bg: 'rgba(10,102,194,0.12)' },
-  { label: 'Facebook', color: '#1877F2', href: 'https://facebook.com', bg: 'rgba(24,119,242,0.12)' },
-  { label: 'Instagram', color: '#E1306C', href: 'https://instagram.com', bg: 'rgba(225,48,108,0.12)' },
+  { label: 'LinkedIn', color: '#0A66C2', href: 'https://www.linkedin.com/company/kdudatainspire/', bg: 'rgba(10,102,194,0.12)' },
+  { label: 'Facebook', color: '#1877F2', href: 'https://web.facebook.com/datasciensekdu', bg: 'rgba(24,119,242,0.12)' },
+  { label: 'Instagram', color: '#E1306C', href: 'https://www.instagram.com/datainspires_kdu', bg: 'rgba(225,48,108,0.12)' },
 ];
 
 export default function ContactPage() {
