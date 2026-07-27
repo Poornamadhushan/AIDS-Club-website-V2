@@ -311,10 +311,10 @@ export const faqs: FAQ[] = [
 ];
 
 export const stats: Stat[] = [
-  { label: 'Active Members', value: 19, suffix: '+' },
+  { label: 'Active Members', value: 50, suffix: '+' },
   { label: 'Events Conducted', value: 25, suffix: '+' },
   { label: 'Projects Built', value: 10, suffix: '+' },
-  { label: 'Community Reach', value: 1000, suffix: '+' },
+  { label: 'Community Reach', value: 800, suffix: '+' },
 ];
 
 export const galleryImages = [
