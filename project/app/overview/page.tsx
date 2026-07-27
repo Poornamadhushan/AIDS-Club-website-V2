@@ -68,7 +68,7 @@ export default function OverviewPage() {
               style={{ opacity: story.visible ? 1 : 0, transform: story.visible ? 'translateX(0)' : 'translateX(-30px)' }}>
               <h2 className="text-3xl font-bold text-white mb-5">Our Story</h2>
               <p className="text-base leading-relaxed mb-4" style={{ color: 'var(--text-muted)' }}>
-                Established within the Faculty of Technology at KDU, DatAInspire bridges the gap between academic knowledge and real-world application. We operate at the intersection of cutting-edge research and practical skill development.
+                Established at KDU, DatAInspire bridges the gap between academic knowledge and real-world application. We operate at the intersection of cutting-edge research and practical skill development.
               </p>
               <p className="text-base leading-relaxed mb-4" style={{ color: 'var(--text-muted)' }}>
                 Our members are cadets, officer cadets, and civilian students who share a deep interest in how AI and data science are reshaping the world — from defence intelligence to healthcare, finance, and beyond.
