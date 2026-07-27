@@ -239,7 +239,7 @@ export const events: Event[] = [
   {
     id: 4,
     title: 'Data Renaissance',
-    date: '2026-07-22',
+    date: '2026-07-27',
     time: '3:00 PM',
     venue: 'FDSS Auditorium',
     description: 'The official Club Installation ceremony, marking the beginning of a new chapter for DatAInspire.',
